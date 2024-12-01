@@ -299,6 +299,11 @@ fn main() {
         y += size.1 + args.line_padding;
     }
 
+    if let Err(e) = std::fs::create_dir_all(&args.output) {
+        eprintln!("Error creating output folder: {}", e);
+        return;
+    }
+
     let output = args.output.join(format!("{}-{:02}-{:02}.png", args.year, args.month, args.day));
     match post.save(output) {
         Ok(_) => println!("Post saved"),
