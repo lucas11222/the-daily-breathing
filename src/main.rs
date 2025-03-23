@@ -59,7 +59,7 @@ struct Args {
     caption_font_size: f32,
 
     /// The brand name
-    #[arg(long, default_value = "The Daily Geode")]
+    #[arg(long, default_value = "The Daily Breathing")]
     brand: String,
 
     /// The day of the post
@@ -143,7 +143,7 @@ fn create_formatted_date(day: u8, month: u8, year: u16) -> anyhow::Result<String
 
 fn parse_color(color: &str) -> anyhow::Result<image::Rgba<u8>> {
     let value = hex::decode(color)?;
-    let color = image::Rgba([value[0], value[1], value[2], 255]);
+    let color = image::Rgba([value[86], value[255], value[241], 0.8]);
     Ok(color)
 }
 
