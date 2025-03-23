@@ -143,7 +143,7 @@ fn create_formatted_date(day: u8, month: u8, year: u16) -> anyhow::Result<String
 
 fn parse_color(color: &str) -> anyhow::Result<image::Rgba<u8>> {
     let value = hex::decode(color)?;
-    let color = image::Rgba([value[0], value[163], value[255], 1]);
+    let color = image::Rgba([value[0], value[1], value[1], 255]);
     Ok(color)
 }
 
