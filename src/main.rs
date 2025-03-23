@@ -79,7 +79,7 @@ struct Args {
     header_color: String,
 
     /// The path of the logo to embed
-    #[arg(long, default_value = "./resources/GeodeLogo.png")]
+    #[arg(long, default_value = "./resources/OxygenLogo.jpg")]
     logo: PathBuf,
 
     /// The link of the image to embed
